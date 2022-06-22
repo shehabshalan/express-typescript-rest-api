@@ -1,6 +1,6 @@
 require("dotenv").config();
 export default {
-  port: 3000,
+  port: 1337,
   dbUri: process.env.DB_URI,
   saltWorkFactor: 10,
 };
