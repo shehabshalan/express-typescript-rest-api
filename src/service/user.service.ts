@@ -7,6 +7,11 @@ export async function createUser(
   >
 ) {
   try {
+    const user = await UserModel.findOne({ email: input.email });
+    if (user) {
+      throw new Error("User already exists");
+    }
+
     return await UserModel.create(input);
   } catch (e: any) {
     throw new Error(e);
