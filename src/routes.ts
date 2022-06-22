@@ -7,3 +7,5 @@ const routes = (app: Express) => {
 
   app.post("/api/users", validateResource(createUserSchema), createUserHandler);
 };
+
+export default routes;
